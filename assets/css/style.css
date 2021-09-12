@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.mobile {
+    display: none;
+}
+
+.fondVert {
+    background-color: #ffffff;
+    /*c'est bien de mettre les classes tout en haut vu qu'elles agissent sur tout le style des pages*/
+}
+
+.fondVert .trait {
+    background-color: #ffffff;
+}
+
+.fondVert .titre {
+    color: #ffffff;
+}
+
+.trait {
+    width: 320px;
+    height: 2px;
+    margin: 22px auto 26px auto;
+    /*haut bas droite et gauche*/
+}
+
+.titre {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+/* VIGNETTES PROJETS */
+.rangee {
+    width: 100%;
+    display: flex;
+}
+.imagePortfolio {
+    width: 300px;
+    height: 250px;
+}
+
+#nejmaProfile {
+    width: 300px;
+}
+
+#portfolio .rangee div {
+    width: 33.33%;
+    /* Pour que chaque image prenne un tiers de la page*/
+    padding: 21px 63px;
+    /*quand on met que deux valeurs comme ça c'est le haut et le bas en premier*/
+}
+
+#apropos .rangee div {
+    width: 50%;
+    padding: 0 250px;
+    margin-top: 50px;
+    color: #ffffff;
+}
+
+#apropos a {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    display: block;
+    /* Pour prendre les dimensions qu'on a énuméré au dessus*/
+    padding: 20px 0px;
+    margin: 54px auto 0 auto;
+    width: 152px;
+    text-align: center;
+}
+
+.rangee div img {
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  /* chaque image prend 100% de leur tiers respectif (elles ne se chevaucheront donc plus mais seront collées) */
+}
+.rangee div img:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    /* au survol de la div => box shadow, effet de carte */
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #000000;
+    position: fixed; /*Permet de fixer la barre de menu en haut, même quand on scroll la page.*/
+    z-index: 1; /* Permet de mettre la nav en premier plan */
+    top: 0;
+    left: 0;
+}
+
+header h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    /* Pour mettre en majuscule */
+    float: left;
+    padding: 15px;
+}
+
+header nav {
+    float: right;
+    display: flex;
+    /* Pour centrer les liens*/
+}
+
+header nav a {
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 25px 20px;
+    text-decoration: none;
+    /* Pour espacer les liens entre eux */
+}
+
+header nav a:hover {
+    /* Pour qu'au survol du lien, le fond du lien est blanc et l'écriture bleue*/
+    color: #000000;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+
+/* Effet background glissant */
+section {
+    background-attachment: fixed;
+}
+section:first-of-type,
+section.pop {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+section:nth-of-type(even) {
+    background: #fff;
+}
+
+section:nth-of-type(1) {
+    background-image: url(../img/background.jpg);
+}
+
+section:nth-of-type(3) {
+    background-image: url(../img/background.jpg);
+}
+
+#profile {
+    width: 100%;
+    padding: 113px 0 170px 0;
+    /* haut bas droite et gauche: toujours dans ce sens là. On a augmenté le padding haut pour que l'image se décale en bas et n'empiète pas sur l'header*/
+    text-align: center;
+    color: #ffffff;
+}
+
+#profile img {
+    /*Pas besoin de mettre d'id ou de classe sur cette image vu que c'est la seule dans l'espace profile => on optimise le code*/
+    margin: auto;
+    display: block;
+    /*Une image est automatiquement en display in-line. Mais vu qu'il y a le margin auto, un display block lui permet de la centrer. */
+}
+
+#profile h2 {
+    font-size: 65px;
+    margin-top: 70px;
+    /* pour faire une marge en haut du titre et décaler le h2 en bas*/
+}
+
+#profil h3 {
+    font-size: 25px;
+    /* taille de police */
+    letter-spacing: 3px;
+    /* espace entre les lignes*/
+}
+
+#portfolio {
+    width: 100%;
+    padding: 100px 0 113px 0;
+    /*haut bas droite et gauche*/
+}
+
+#portfolio .titre {
+    color: #000000;
+}
+
+#portfolio .trait {
+    background-color: #000000;
+}
+
+#apropos {
+    width: 100%;
+    padding: 100px 0 120px 0;
+}
+
+#apropos .rangee div h3 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+#apropos p {
+    color: #ffffff;
+    text-align: center;
+}
+
+#apropos a:hover {
+    color: #000000;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+#lienCV {
+    text-decoration: none;
+}
+
+#contact {
+    width: 100%;
+    padding: 100px 0 90px 0;
+}
+
+#contact .titre {
+    color: #2d3e50;
+}
+
+#contact .trait {
+    background-color: #000000;
+}
+
+#contact form {
+    width: 802px;
+    margin: auto;
+}
+
+#contact form label {
+    margin-bottom: 24px;
+    color: #2d3e50;
+    display: block;
+}
+
+#contact form input {
+    width: 100%;
+    height: 32px;
+    border: 1px dashed #000000;
+    border-radius: 10px;
+    margin-bottom: 26px;
+}
+
+#contact form textarea {
+    width: 100%;
+    height: 102px;
+    border: 1px dashed #000000;
+    border-radius: 10px;
+    margin-bottom: 26px;
+    resize: none;
+    /* Permet de verouiller le carré de message pour ne pas casser la mise en forme*/
+}
+
+#contact form #submit {
+    width: 125px
+        /*[important] quand on est en conflit parce qu'on a précédemment statué des caractéristiques (pour un input par ex) => c'est pour dire que le nouveau changement est prioritaire*/;
+    height: 63px;
+    border: none;
+    background-color: #000000;
+    font-size: 20px;
+    color: #ffffff;
+    margin: auto;
+    /* pour le centrer */
+    display: block;
+    /* pour que le margin auto fonctionne */
+    cursor: pointer;
+}
+
+#contact form #submit:hover {
+    color: #000000;
+    background-color: #ffffff;
+    transition: 0.5s;
+    border: 1px solid #000000;
+}
+
+footer {
+    width: 100%;
+}
+
+footer #informations {
+    width: 100%;
+    background-color: #000000;
+    padding: 55px 0 31px 0;
+    display: flex;
+}
+
+footer #informations div {
+    width: 50%;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer #informations div h3 {
+    margin-bottom: 18px;
+}
+
+footer #informations a {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+footer #informations a:hover {
+    color: #000000;
+    transition: 0.5s;
+}
+
+footer #copyrights {
+    width: 100%;
+    padding: 25px 0 25px 0;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* ANIMATION LOADER */
+
+
+/* RESPONSIVE  */
+@media screen and (max-width: 667px) {
+    .mobile {
+        display: block;
+        margin: 15px;
+        padding: 0 12px 0 3px;
+        width: 37px;
+    }
+
+    .trait {
+        width: 90%;
+    }
+
+    .rangee {
+        display: block;
+    }
+
+    .lettre {
+        color: #484848;
+        font-size: 20px;
+        letter-spacing: 15px;
+        margin-bottom: 150px;
+        animation: flash 1.2s linear infinite;
+    }
+    header h1 {
+        font-size: 25px;
+    }
+
+    header img{
+        float: right;
+        /* Pour régler la taille de bouton du menu (la nav) */
+    }
+
+    header nav {
+        display: none;
+        /* pour supprimer la nav sur mobile*/
+        float: none;
+    }
+
+    header nav a {
+        display: block;
+        text-decoration: none;
+        /* On fait apparaître les liens de la nav en display block*/
+        text-align: center;
+    }
+
+    #profile {
+        padding-bottom: 100px;
+    }
+
+    #profile h2 {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    #profile h3 {
+        font-size: 20px;
+    }
+
+    #portfolio {
+        padding: 70px 0;
+    }
+
+    #portfolio .rangee div {
+        width: 100%;
+        padding: 21px 15px;
+        box-sizing: border-box;
+    }
+
+    #apropos {
+        padding: 70px 0;
+    }
+
+    #apropos .rangee div {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    #contact {
+        padding: 70px 0;
+    }
+
+    #contact form {
+        width: 90%;
+    }
+
+    footer #informations {
+        display: block;
+    }
+
+    footer #informations div {
+        width: 100%;
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 660px) and (orientation : landscape) {
+    /* iPhone 6 landscape */
+    section{
+        width: 100%;
+    }
+}
