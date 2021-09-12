@@ -57,17 +57,7 @@ if ($_POST) {
                 </div>
             </div>';
             }
-        else{
-            $error .= '
-            <div class="d-flex justify-content-center">
-                <div class="alert alert-danger d-flex align-items-center" role="alert">
-                        <div>
-                            Erreur !
-                        </div>
-                </div>
-            </div>
-            ';
-        }
+        echo "leozfipzjfzzhvhz";
         
     }
 
